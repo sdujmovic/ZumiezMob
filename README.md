@@ -1,5 +1,5 @@
 # Automated Testing for Zumiez Mobile App
-Test script is created to run tests that verify basic functionality works. These should run quickly and catch major breaks early in the development cycle. Test script is written for cross device testing on iOS and Android. Test status is automaticaly updated in Zephyr. Tests can be run locally and on Browserstack. To run java based Appium tests for Android in Eclipse, you will need to set up several components and configure your environment properly. 
+Test script is created to run tests that verify basic functionality works. These should run quickly and catch major breaks early in the development cycle. Test script is written for cross device testing on iOS and Android. Test status is automaticaly updated in Zephyr. Tests can be run locally and on Browserstack. To run java based Appium tests in Eclipse, you will need to set up several components and configure your environment properly. 
 
 ## Prerequisites
 ### Java Development Kit (JDK)
