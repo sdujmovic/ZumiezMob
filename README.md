@@ -38,7 +38,7 @@ Create a Maven project and add these dependencies to pom.xml:
     </dependency>
 </dependencies>
 ```
-## Android Device/Emulator Setup
+## Device/Emulator Setup
 ### Physical Device
 - Enable Developer Options and USB Debugging
 - Install appropriate USB drivers
