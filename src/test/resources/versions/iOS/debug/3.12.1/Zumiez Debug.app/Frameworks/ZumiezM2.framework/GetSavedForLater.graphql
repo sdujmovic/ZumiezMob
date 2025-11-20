@@ -1,0 +1,43 @@
+query GetSavedForLater($pageSize: Int!, $currentPage: Int!) {
+  mpSaveCartGetProducts(filter: {}, pageSize: $pageSize, currentPage: $currentPage) {
+    items {
+      created_at
+      customer_id
+      id
+      image_url
+      price
+      product { id sku url type_id name image { url }
+                    price_range {
+                minimum_price {
+                  discount { amount_off percent_off }
+                  final_price { currency value }
+                  final_price_excl_tax { currency value }
+                  regular_price { currency value }
+                  regular_price_excl_tax { currency value }
+                  default_price { currency value }
+                  default_final_price { currency value }
+                  default_final_price_excl_tax { currency value }
+                }
+                maximum_price {
+                  discount { amount_off percent_off }
+                  final_price { currency value }
+                  final_price_excl_tax { currency value }
+                  regular_price { currency value }
+                  regular_price_excl_tax { currency value }
+                  default_price { currency value }
+                  default_final_price { currency value }
+                  default_final_price_excl_tax { currency value }
+                }
+              }
+       }
+      product_id
+      product_name
+      qty
+      share_url
+      store_id
+      subtotal_converted
+      token
+    }
+    total_count
+  }
+}

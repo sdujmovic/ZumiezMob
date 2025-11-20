@@ -1,0 +1,16 @@
+query {
+  countries {
+	id
+	is_state_required
+	two_letter_abbreviation
+	three_letter_abbreviation
+	full_name_locale
+	full_name_english
+	available_regions {
+	  code
+	  name
+	  id
+	}
+	label: full_name_locale
+  }
+ }

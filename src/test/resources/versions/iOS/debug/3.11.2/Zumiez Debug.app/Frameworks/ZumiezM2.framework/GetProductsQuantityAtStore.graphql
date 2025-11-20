@@ -1,0 +1,15 @@
+query getProductsQuantityAtStore($storeInventoryInput: MultipleInventoryInput!){
+    storeInventoryMultiple(input: $storeInventoryInput){
+        inventory {
+            ... on StoreProductsInventory {
+                store
+            }
+            items {
+                ... on StoreProductInventoryItem {
+                    quantity
+                    sku
+                }
+            }
+        }
+    }
+}

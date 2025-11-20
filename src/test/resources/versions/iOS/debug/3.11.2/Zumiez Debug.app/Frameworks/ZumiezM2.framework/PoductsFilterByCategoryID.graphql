@@ -1,0 +1,37 @@
+query ($categoryID: String!) {
+  products(filter: { category_id: { eq: $categoryID } }) {
+    items {
+      id
+      uid
+      __typename
+      name
+      url_key
+      sku
+      description {
+        html
+      }
+      image {
+        url
+      }
+      thumbnail {
+        url
+      }
+      url_key
+      updated_at
+      created_at
+      price {
+        regularPrice {
+          amount {
+            currency
+            value
+          }
+        }
+      }
+      categories {
+        __typename
+        id
+        url_path
+      }
+    }
+  }
+}

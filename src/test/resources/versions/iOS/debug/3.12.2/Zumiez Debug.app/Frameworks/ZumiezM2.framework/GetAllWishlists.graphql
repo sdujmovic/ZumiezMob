@@ -1,0 +1,62 @@
+query GetAllWishlists($currentPage:Int!, $pageSize:Int!){
+    wishlists(currentPage: $currentPage, pageSize: $pageSize){
+        id
+        creators_name
+        name
+        sharing_code
+        is_default
+        updated_at
+        items {
+            id
+            sku
+            product {
+                sku
+                image {
+                    url
+                }
+                name
+                original_price
+                special_price
+                ... on ConfigurableProduct{
+                    sku
+                    configurable_options {
+                        attribute_code
+                        attribute_id_v2
+                        values {
+                            label
+                            value_index
+                        }
+                    }
+                    variants {
+                        product {
+                            att_size
+                            sku
+                            price_range {
+                                minimum_price {
+                                    discount { amount_off percent_off }
+                                    final_price { currency value }
+                                    final_price_excl_tax { currency value }
+                                    regular_price { currency value }
+                                    regular_price_excl_tax { currency value }
+                                    default_price { currency value }
+                                    default_final_price { currency value }
+                                    default_final_price_excl_tax { currency value }
+                                }
+                                maximum_price {
+                                    discount { amount_off percent_off }
+                                    final_price { currency value }
+                                    final_price_excl_tax { currency value }
+                                    regular_price { currency value }
+                                    regular_price_excl_tax { currency value }
+                                    default_price { currency value }
+                                    default_final_price { currency value }
+                                    default_final_price_excl_tax { currency value }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

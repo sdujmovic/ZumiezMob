@@ -1,0 +1,10 @@
+query urlResolver($url: String!) {
+  urlResolver(url: $url) {
+    id
+    sku
+    type
+    redirectCode
+    relative_url
+    canonical_url
+  }
+}

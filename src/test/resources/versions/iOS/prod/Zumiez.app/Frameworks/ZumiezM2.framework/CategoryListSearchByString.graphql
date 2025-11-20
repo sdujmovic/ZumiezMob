@@ -1,0 +1,17 @@
+query ($searchString: String!) {
+  categoryList(filters: { name: { match: $searchString } }) {
+    __typename
+    children_count
+    children {
+      __typename
+      name
+      id
+      level
+      path
+      position
+      is_anchor
+      url_key
+      url_path
+    }
+  }
+}

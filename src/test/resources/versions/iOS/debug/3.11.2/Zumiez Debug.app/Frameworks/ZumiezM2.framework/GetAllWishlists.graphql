@@ -1,0 +1,42 @@
+query GetAllWishlists {
+    customer {
+        wishlists {
+            id
+            name
+            sharing_code
+            items_v2 {
+                items {
+                    id
+                    sku
+                    product {
+                        __typename
+                        sku
+                        name
+                        original_price
+                        special_price
+                        image {
+                            url
+                        }
+                        ... on ConfigurableProduct {
+                            sku
+                            configurable_options {
+                                attribute_code
+                                attribute_id_v2
+                                values {
+                                    label
+                                    value_index
+                                }
+                            }
+                            variants {
+                                product {
+                                    sku
+                                    att_size
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

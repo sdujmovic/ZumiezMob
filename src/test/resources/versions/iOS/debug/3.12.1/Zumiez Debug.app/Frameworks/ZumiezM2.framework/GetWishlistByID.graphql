@@ -1,0 +1,38 @@
+query GetWishlistForId($id: ID!) {
+  customer {
+    wishlist_v2(id: $id) {
+      id
+      name
+      sharing_code
+      items_v2 {
+        items {
+          id
+          product {
+            sku
+            image {
+              url
+            }
+            name
+            original_price
+            special_price
+            ... on ConfigurableProduct {
+              configurable_options {
+                id
+                values {
+                  label
+                  value_index
+                }
+              }
+              variants {
+                product {
+                  sku
+                  att_size
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

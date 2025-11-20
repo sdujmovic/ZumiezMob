@@ -1,0 +1,67 @@
+query ($sku: String!) {
+  products(filter: { sku: { eq: $sku } }) {
+    items {
+      id
+      __typename
+      name
+      url_key
+      sku
+      price {
+        regularPrice {
+          amount {
+            currency
+            value
+          }
+        }
+      }
+      ... on ConfigurableProduct {
+        variants: variants {
+          product {
+            id
+            sku
+            price {
+              regularPrice {
+                amount {
+                  currency
+                  value
+                }
+              }
+            }
+            stock_status
+            salable_qty
+            stock_item {
+              in_stock
+              min_sale_qty
+              max_sale_qty
+              qty_increments
+            }
+            thumbnail {
+              path
+              url
+            }
+            dimensions
+            name
+            attributes: s_attributes {
+              attribute_id
+              attribute_value
+              attribute_code
+              attribute_label
+              attribute_type
+              attribute_group_id
+              attribute_group_name
+              attribute_options {
+                label
+                value
+                swatch_data {
+                  type
+                  value
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+

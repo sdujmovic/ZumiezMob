@@ -1,0 +1,11 @@
+mutation AddProductsToMultipleWishlists(
+  $wishlistIds: [ID!]!,
+  $wishlistItems: [WishlistItemInput!]!
+) {
+  addProductsToMultipleWishlists(
+    wishlistIds: $wishlistIds,
+    wishlistItems: $wishlistItems
+  ) {
+    wishlists { id }
+  }
+}

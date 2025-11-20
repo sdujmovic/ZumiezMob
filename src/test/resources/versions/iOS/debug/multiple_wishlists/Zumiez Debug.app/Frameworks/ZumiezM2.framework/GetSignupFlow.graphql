@@ -1,0 +1,8 @@
+query GetSignupFlow($phoneNumber: String!) {
+  getSignupFlow(phoneNumber: $phoneNumber) {
+    storeCountry
+    storeId
+    phoneNumber
+  }
+}
+

@@ -1,0 +1,7 @@
+mutation UpdateCustomerEmail($email: Int!, $password: String!) {
+  updateCustomerEmail(email: $email, password: $password) {
+    customer {
+      email
+    }
+  }
+}

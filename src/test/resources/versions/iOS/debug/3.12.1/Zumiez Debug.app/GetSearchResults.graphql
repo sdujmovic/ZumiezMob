@@ -1,0 +1,124 @@
+query GetSearchResults(
+  $keyphrase: String!,
+  $facets: [String!],
+  $filter: [FilterInput!],
+  $limit: Int!,
+  $sort: SortOrderValue,
+  $page: Int!
+) {
+  getSearchResults(
+    keyphrase: $keyphrase,
+    facets: $facets,
+    filter: $filter,
+    limit: $limit,
+    sort: $sort,
+    page: $page
+  ) {
+    ts
+    dt
+    rid
+    widget {
+      rfkid
+      used_in
+      variation_id
+      type
+    }
+    errors {
+      type
+      code
+      message
+      severity
+    }
+    suggestion {
+      keyphrase {
+        id
+        in_content
+        text
+        freq
+      }
+    }
+    url
+    page_number
+    n_item
+    total_item
+    total_page
+    facet_names
+    sort {
+      choices {
+        name
+        label
+        order
+      }
+    }
+    content {
+      product {
+        value {
+          id
+          name
+          promo_text
+          product_group_id
+          product_url
+          price
+          brand
+          final_price
+          category_names
+          promotion_flag
+          stock_quantity
+          skuid
+          breadcrumbs
+          image_url
+          sku
+          color
+          size
+          product_group
+          search_keywords
+          widget_id
+          promo_flags {
+            name
+            text
+          }
+        }
+        total_item
+        n_item
+      }
+    }
+    facet {
+      key
+      value {
+        id
+        text
+        count
+        in_content
+      }
+      total
+      number_of_products
+      display_name
+    }
+    noReccTrendingProducts {
+      id
+      name
+      promo_text
+      product_group_id
+      product_url
+      price
+      brand
+      final_price
+      category_names
+      promotion_flag
+      stock_quantity
+      skuid
+      breadcrumbs
+      image_url
+      sku
+      color
+      size
+      product_group
+      search_keywords
+      widget_id
+      promo_flags {
+        name
+        text
+      }
+    }
+  }
+}

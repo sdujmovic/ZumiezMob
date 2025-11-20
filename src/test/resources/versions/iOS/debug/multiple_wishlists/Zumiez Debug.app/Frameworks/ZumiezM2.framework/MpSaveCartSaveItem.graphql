@@ -1,0 +1,3 @@
+mutation MpSaveCartSaveItem($cartId: String!, $itemId: String!) {
+  mpSaveCartSaveItem(cart_id: $cartId, item_id: $itemId)
+}

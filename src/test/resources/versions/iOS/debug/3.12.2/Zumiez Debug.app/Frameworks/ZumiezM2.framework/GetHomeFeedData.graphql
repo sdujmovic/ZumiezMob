@@ -1,0 +1,156 @@
+query getHomeFeedData {
+  getHomeFeedData {
+    campaign_category
+    campaign_id
+    campaign_name
+    campaign_subcategory
+    default_content
+    display_logic
+    group_id
+    help_text
+    rank
+    template_id
+    feeds
+    content_source {
+      field
+      include_logic
+      sort_logic {
+        direction
+        field
+      }
+      source
+    }
+    type
+    campaign_end
+    campaign_start
+    reward_verification_id
+    ct_content {
+        ... on UserActivityExtended {
+        id
+        name
+        title
+        description
+        num_points
+        image
+        category_name
+        type_id
+        type_name
+        activity_channel_id
+        activity_channel_name
+        freq_cap
+        freq_period_id
+        freq_period_name
+        freq_num_required_attempts
+        redirect_url
+        points_on_click
+        date_start
+        date_end
+        min_tier_id
+        show_as_locked_by_tier
+        public_title
+        public_description
+        extra_data
+        action_tags
+        activity_tags {
+          tag_name
+          tag_id
+        }
+        segment {
+          name
+          subscription_id
+          eligibility_type
+        }
+      }
+      ... on UserRewardDetails {
+        id
+        featured
+        featured_order_num
+        title
+        description
+        num_points
+        image
+        category_id
+        freq_cap
+        freq_period_id
+        freq_period_name
+        date_start
+        date_end
+        min_tier_id
+        extra_data
+        current_quantity
+        date_end_redeemable
+        is_enabled
+        group_id
+        no_end_date
+        total_quantity
+        max_select_quantity
+        max_per_user
+        is_shipping_required
+        is_phone_number_required
+        is_min_age_required
+        min_age
+        is_digital_download
+        sweepstake_winners
+        reference_id
+        color
+        size
+        total_coupons
+        remaining_coupons
+        reward_terms
+        additional_images {
+          additional_images
+        }
+        partner_info {
+          id
+          name
+        }
+        segment {
+          name
+          subscription_id
+          eligibility_type
+        }
+        }
+    }
+    products {
+      category_names
+      color
+      final_price
+      id
+      image_url
+      name
+      price
+      product_group
+      product_group_id
+      product_url
+      promo_flags {
+        name
+        text
+      }
+      promo_text
+      promotion_flag
+      size
+      sku
+      skuid
+      stock_quantity
+      widget_id
+    }
+    static_content {
+      card_content {
+        body_copy
+        btn_group {
+          data
+          event_name
+          id
+          style
+          title
+          type
+        }
+        event_name
+        image_alt_text
+        image_url
+        share_url
+        title_copy
+      }
+    }
+  }
+}

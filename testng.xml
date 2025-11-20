@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Mobile Test Suite" parallel="false" verbose="2">
+	<test name="iOS Debug Tests">
+		<parameter name="platform" value="ios" />
+		<parameter name="environment" value="ios-debug" />
+		<classes>
+			<class name="zmobile.tests.LandingAndLoginTest" />
+			<class name="zmobile.tests.ValidateHomePage" />
+			<class name="zmobile.tests.ValidateProfilePage" />
+			<class name="zmobile.tests.ValidateEditProfilePage" />
+			<class name="zmobile.tests.ValidateStashPage" />
+			<class name="zmobile.tests.ValidateShopPage" />
+			<class name="zmobile.tests.ValidateProductDetailsPage" />
+			<class name="zmobile.tests.ValidateSearchPage" />
+			<class name="zmobile.tests.ValidateWishlistsPage" />
+			<class name="zmobile.tests.ValidateBagPage" />
+		</classes>
+	</test>
+</suite>

@@ -1,0 +1,35 @@
+mutation ($customerUpdateInput: CustomerUpdateInput!) {
+  updateCustomerV2(input: $customerUpdateInput) {
+    customer {
+      allow_remote_shopping_assistance
+      customer_email_hash
+      date_of_birth
+      dob
+      firstname
+      gender
+      middlename
+      lastname
+      suffix
+      email
+      default_billing
+      default_shipping
+      dob
+      taxvat
+      id
+      is_subscribed
+      myzumiez_store_id
+      is_subscribed_for_catalog
+      mobile_number
+      userExistingCustomer
+      userLifetimeValue
+      userLifetimeOrders
+      gender
+      stash_data {
+        stash_id
+        stash_points
+        stash_level
+      }
+      employee_sales_code
+    }
+  }
+}

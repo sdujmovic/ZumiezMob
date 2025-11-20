@@ -1,0 +1,14 @@
+mutation SetPickupLocator(
+  $cart_id: String!,
+  $cart_item_id: String!,
+  $pickup_locator_id: String!
+) {
+  addPickupLocatorIdToQuoteItem(
+    cart_id: $cart_id,
+    cart_item_id: $cart_item_id,
+    pickup_locator_id: $pickup_locator_id
+  ) {
+    success
+    message
+  }
+}

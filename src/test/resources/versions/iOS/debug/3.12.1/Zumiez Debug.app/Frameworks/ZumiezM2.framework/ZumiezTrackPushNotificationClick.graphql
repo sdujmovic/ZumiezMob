@@ -1,0 +1,12 @@
+mutation pushNotificationClick($input: PushNotificationInput!) {
+    pushNotificationClick(createEventData: $input) {
+        id
+        stashId
+        category
+        eventType
+        platform
+        version
+        payload
+        createdAt
+    }
+}

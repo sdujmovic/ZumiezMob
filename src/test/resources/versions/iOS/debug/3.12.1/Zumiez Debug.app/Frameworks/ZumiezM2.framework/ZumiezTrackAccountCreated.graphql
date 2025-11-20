@@ -1,0 +1,13 @@
+  mutation accountCreated($input: AccountCreatedInput!) {
+      accountCreated(createEventData: $input) {
+          id
+          stashId
+          category
+          eventType
+          platform
+          version
+          payload
+          createdAt
+      }
+  }
+

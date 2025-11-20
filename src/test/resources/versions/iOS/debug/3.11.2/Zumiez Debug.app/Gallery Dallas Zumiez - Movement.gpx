@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<gpx version="1.1" creator="Xcode">
+    <wpt lat="32.909533" lon="-96.810529">
+        <name>Start point</name>
+        <time>2022-07-01T10:00:00Z</time>
+    </wpt>
+    <wpt lat="32.928991" lon="-96.819326">
+        <name>Dallas Zumiez</name>
+        <time>2022-07-01T10:00:30Z</time>
+    </wpt>
+</gpx>

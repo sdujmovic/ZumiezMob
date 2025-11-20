@@ -1,0 +1,57 @@
+mutation ($customerInput: CustomerInput!, $channel_id: Int!, $campaign_id: String!, $email: String!, $password: String!) {
+  createCustomer(input: $customerInput, channel_id: $channel_id, campaign_id: $campaign_id) {
+    customer {
+      created_at
+      confirmation_required
+      group_id
+      prefix
+      firstname
+      middlename
+      lastname
+      suffix
+      email
+      default_billing
+      default_shipping
+      dob
+      taxvat
+      id
+      is_subscribed
+      myzumiez_store_id
+      gender
+      addresses {
+        id
+        customer_id
+        country_id
+        street
+        telephone
+        postcode
+        city
+        firstname
+        lastname
+        middlename
+        prefix
+        suffix
+        default_shipping
+        default_billing
+        default_home
+        vat_id
+        region {
+          region_code
+          region
+          region_id
+        }
+      }
+      date_of_birth
+      mobile_number
+      userExistingCustomer
+      userLifetimeValue
+      userLifetimeOrders
+      stash_data {
+        stash_id
+        stash_points
+        stash_level
+      }
+    }
+    login_token(email: $email, password: $password)
+  }
+}

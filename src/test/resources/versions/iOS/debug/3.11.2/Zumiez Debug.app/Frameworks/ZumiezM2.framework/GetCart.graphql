@@ -1,0 +1,222 @@
+query GetCart($cartId: String!) {
+  cartData: cart(cart_id: $cartId) {
+    applied_store_credit {
+      enabled
+      current_balance { currency value }
+      applied_balance { currency value }
+    }
+    applied_gift_cards {
+      code
+      expiration_date
+      current_balance { currency value }
+      applied_balance { currency value }
+    }
+
+    id
+    email
+
+    prices {
+      applied_rule_ids
+      coupon_code
+      quote_currency_code
+      grand_total { value currency }
+      subtotal_including_tax { value currency }
+      subtotal_excluding_tax { value currency }
+      subtotal_with_discount_excluding_tax { value currency }
+      discount { label amount { value currency } }
+      applied_taxes { label percent amount { value currency } }
+      amasty_discounts { rule_id name discount_amount }
+    }
+
+    shipping_addresses {
+      available_shipping_methods {
+        available
+        method_code
+        carrier_code
+        carrier_title
+        error_message
+      }
+      selected_shipping_method {
+        amount_incl_tax
+        carrier_code
+        carrier_title
+        method_code
+        method_title
+        tax_amount
+        amount { value currency }
+      }
+      customer_notes
+    }
+
+    minimum_order_amount {
+      minimum_order_amount_reached
+      minimum_order_description
+    }
+
+    items {
+      id
+      uid
+      sku
+      quantity
+
+      prices {
+        price { value currency }
+        row_total { value currency }
+        row_total_including_tax { value currency }
+        total_item_discount { value currency }
+        sold_cart_adjustment_price {
+          adjusted_price { value currency }
+          original_price { value currency }
+          original_row_total { value currency }
+        }
+      }
+
+      product {
+        id
+        sku
+        name
+        type_id
+        stock_status
+        url
+        salable_qty
+        image { path url }
+        stock_item {
+          in_stock
+          min_sale_qty
+          max_sale_qty
+          qty_increments
+        }
+        thumbnail { path url }
+        # keep legacy prices your app already uses
+        original_price
+        special_price
+
+        ... on ConfigurableProduct {
+          variants {
+            product {
+              id
+              sku
+              stock_status
+              salable_qty
+              price_range {
+                minimum_price {
+                  discount { amount_off percent_off }
+                  final_price { currency value }
+                  final_price_excl_tax { currency value }
+                  regular_price { currency value }
+                  regular_price_excl_tax { currency value }
+                  default_price { currency value }
+                  default_final_price { currency value }
+                  default_final_price_excl_tax { currency value }
+                }
+                maximum_price {
+                  discount { amount_off percent_off }
+                  final_price { currency value }
+                  final_price_excl_tax { currency value }
+                  regular_price { currency value }
+                  regular_price_excl_tax { currency value }
+                  default_price { currency value }
+                  default_final_price { currency value }
+                  default_final_price_excl_tax { currency value }
+                }
+              }
+              attributes: s_attributes {
+                attribute_id
+                attribute_value
+                attribute_code
+                attribute_label
+              }
+              dimensions
+              name
+            }
+          }
+          price_range {
+            minimum_price {
+              discount { amount_off percent_off }
+              final_price { currency value }
+              final_price_excl_tax { currency value }
+              regular_price { currency value }
+              regular_price_excl_tax { currency value }
+              default_price { currency value }
+              default_final_price { currency value }
+              default_final_price_excl_tax { currency value }
+            }
+            maximum_price {
+              discount { amount_off percent_off }
+              final_price { currency value }
+              final_price_excl_tax { currency value }
+              regular_price { currency value }
+              regular_price_excl_tax { currency value }
+              default_price { currency value }
+              default_final_price { currency value }
+              default_final_price_excl_tax { currency value }
+            }
+          }
+          configurable_options {
+            attribute_code
+            attribute_id_v2
+            values { label value_index }
+          }
+          variants {
+            product { sku att_size }
+          }
+        }
+      }
+
+      # type-specific extras (kept optional in models)
+      ... on DownloadableCartItem {
+        links { id title sort_order price }
+        samples { id title }
+        downloadable_customizable_options: customizable_options { id is_required label sort_order type values { id label value } }
+      }
+      ... on BundleCartItem {
+        bundle_options { id label type values { id label quantity price } }
+        bundle_customizable_options: customizable_options { id label type sort_order is_required values { id label value } }
+      }
+      ... on ConfigurableCartItem {
+        configurable_options { id option_label value_label value_id }
+        configurable_customizable_options: customizable_options { id label type sort_order is_required values { id label value } }
+      }
+      ... on VirtualCartItem {
+        virtual_customizable_options: customizable_options { id label type sort_order is_required values { id label value } }
+      }
+      ... on SimpleCartItem {
+        simple_customizable_options: customizable_options { id label type sort_order is_required values { id label value } }
+      }
+      ... on PackageDealProductCartItem {
+        selected_package_options {
+          parent_sku
+          parent_categories { name }
+          option_id
+          quantity
+          configurable_options { id option_label value_label value_id }
+          configured_variant {
+            id
+            sku
+            name
+            type_id
+            stock_status
+            url
+            salable_qty
+            stock_item { in_stock min_sale_qty max_sale_qty qty_increments }
+            thumbnail { path url }
+          }
+        }
+        package_cartitem_assigned_to { id sku product_url suggested_options { option_id product_id } }
+      }
+
+      pickup_locator {
+        id
+        store { identifier store_name has_store_page curbside_available temporary_closed }
+      }
+    }
+
+    total_quantity
+    is_virtual
+    is_in_store_pickup_available
+    notifications
+    applied_aurus_gift_cards { number applied_balance { value currency } }
+    check_it_out_link { link }
+    checkout_session_id
+  }
+}

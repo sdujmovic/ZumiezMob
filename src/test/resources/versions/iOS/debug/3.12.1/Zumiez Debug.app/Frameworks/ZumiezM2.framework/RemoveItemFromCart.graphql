@@ -1,0 +1,5 @@
+mutation RemoveItemFromCart($input: RemoveItemFromCartInput!) {
+  removeItemFromCart(input: $input) {
+    cart { id }
+  }
+}

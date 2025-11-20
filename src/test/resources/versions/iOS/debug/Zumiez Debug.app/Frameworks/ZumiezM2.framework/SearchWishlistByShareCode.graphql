@@ -1,0 +1,6 @@
+query searchWishlistByShareCode($sharing_code: ID!) {
+  s_wishlist(sharing_code: $sharing_code) {
+    creators_name
+    id
+  }
+}

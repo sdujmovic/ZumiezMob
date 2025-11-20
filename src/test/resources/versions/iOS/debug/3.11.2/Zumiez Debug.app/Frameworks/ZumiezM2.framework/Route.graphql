@@ -1,0 +1,9 @@
+query route($url: String!) {
+  route(url: $url) {
+    __typename
+    ... on ProductInterface {
+      sku
+    }
+  }
+}
+

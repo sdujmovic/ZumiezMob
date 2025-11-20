@@ -1,0 +1,12 @@
+query FetchMediaGallery($product_id: Int!) {
+  fetchMediaGallery(product_id: $product_id) {
+    base {
+      type
+      url
+    }
+    large {
+      type
+      url
+    }
+  }
+}

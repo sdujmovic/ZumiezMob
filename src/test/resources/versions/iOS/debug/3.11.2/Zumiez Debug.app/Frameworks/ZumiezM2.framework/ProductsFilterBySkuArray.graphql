@@ -1,0 +1,39 @@
+query ($skuArray: [String]!) {
+  products(filter: { sku: { in: $skuArray } }) {
+    items {
+      id
+      uid
+      __typename
+      name
+      url_key
+      sku
+      description {
+        html
+      }
+      image {
+        url
+      }
+      thumbnail {
+        url
+      }
+      url_key
+      updated_at
+      created_at
+      att_fit_details
+      att_product_details
+      price {
+        regularPrice {
+          amount {
+            currency
+            value
+          }
+        }
+      }
+      categories {
+        id
+        __typename
+        url_path
+      }
+    }
+  }
+}

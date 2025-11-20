@@ -1,0 +1,12 @@
+mutation conversationRead($input: ConversationReadInput!) {
+    conversationRead(createEventData: $input) {
+        id
+        stashId
+        category
+        eventType
+        platform
+        version
+        payload
+        createdAt
+    }
+}

@@ -1,0 +1,34 @@
+mutation setShippingAddressesOnCart($input: SetShippingAddressesOnCartInput) {
+  setShippingAddressesOnCart(input: $input) {
+    cart {
+      id
+      available_payment_methods {
+        code
+      }
+      shipping_addresses {
+        firstname
+        lastname
+        company
+        street
+        city
+        region {
+          code
+          label
+        }
+        postcode
+        telephone
+        country {
+          code
+          label
+        }
+        available_shipping_methods {
+          carrier_code
+          carrier_title
+          method_code
+          method_title
+        }
+      }
+    }
+  }
+}
+

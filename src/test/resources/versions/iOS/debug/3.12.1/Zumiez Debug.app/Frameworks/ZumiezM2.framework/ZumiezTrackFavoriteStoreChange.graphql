@@ -1,0 +1,12 @@
+mutation favoriteStoreChange($input: FavoriteStoreChangeInput!) {
+    favoriteStoreChange(createEventData: $input) {
+        id
+        stashId
+        category
+        eventType
+        platform
+        version
+        payload
+        createdAt
+    }
+}

@@ -1,0 +1,23 @@
+query ($idsArray: [String]!) {
+  categoryList(filters: { ids: { in: $idsArray } }) {
+    __typename
+    children_count
+    children {
+      __typename
+      name
+      id
+      level
+      path
+      position
+      is_anchor
+      url_key
+      url_path
+      breadcrumbs {
+        category_id
+        category_name
+        category_level
+        category_url_key
+      }
+    }
+  }
+}

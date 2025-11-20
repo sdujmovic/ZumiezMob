@@ -1,0 +1,3 @@
+mutation AddWishlistItemsToCart($wishlistId: ID!) {
+  addWishlistItemsToCart: s_addWishlistByIdToCart(wishlistId: $wishlistId)
+}

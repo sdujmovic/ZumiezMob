@@ -1,0 +1,13 @@
+mutation updateProductsInWishlist(
+  $wishlistId: ID!,
+  $wishlistItems: [WishlistItemUpdateInput!]!
+) {
+  updateProductsInWishlist(
+    wishlistId: $wishlistId,
+    wishlistItems: $wishlistItems
+  ) {
+    wishlist {
+      id
+    }
+  }
+}

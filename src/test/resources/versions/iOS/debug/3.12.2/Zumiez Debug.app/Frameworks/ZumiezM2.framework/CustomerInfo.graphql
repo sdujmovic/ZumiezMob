@@ -1,0 +1,71 @@
+query {
+  customer {
+    created_at
+    confirmation_required
+    group_id
+    prefix
+    firstname
+    middlename
+    lastname
+    suffix
+    email
+    default_billing
+    default_shipping
+    default_home
+    dob
+    taxvat
+    id
+    is_subscribed
+    myzumiez_store_id
+    gender
+    addresses {
+      id
+      customer_id
+      country_id
+      street
+      telephone
+      postcode
+      city
+      firstname
+      lastname
+      middlename
+      prefix
+      suffix
+      default_shipping
+      default_billing
+      default_home
+      vat_id
+      region {
+        region_code
+        region
+        region_id
+      }
+    }
+    date_of_birth
+    mobile_number
+    userExistingCustomer
+    userLifetimeValue
+    userLifetimeOrders
+    stash_data {
+      stash_id
+      stash_points
+      stash_level
+    }
+    employee_sales_code
+    att_ethnicity {
+      id
+      label
+    }
+    att_ethnicity_other
+    att_gender {
+      id
+      label
+    }
+    att_gender_other
+    att_has_app
+    wishlists {
+        id
+        name
+    }
+  }
+}

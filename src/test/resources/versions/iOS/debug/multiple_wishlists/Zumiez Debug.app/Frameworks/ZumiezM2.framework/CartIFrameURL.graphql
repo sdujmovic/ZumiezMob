@@ -1,0 +1,3 @@
+mutation ($cartID: String!, $type: String!) {
+  iFrameUrl(cartId: $cartID, type: $type)
+}

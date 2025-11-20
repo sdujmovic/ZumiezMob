@@ -1,0 +1,3 @@
+mutation MpSaveCartDeleteProduct($token: String!) {
+  mpSaveCartDeleteProduct(token: $token)
+}

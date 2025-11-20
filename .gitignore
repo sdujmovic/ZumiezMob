@@ -1,0 +1,7 @@
+target/
+*.apk
+*.dylib
+test-output/
+.DS_Store
+*.class
+build/

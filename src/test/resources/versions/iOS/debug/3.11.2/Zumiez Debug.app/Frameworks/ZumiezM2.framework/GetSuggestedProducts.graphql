@@ -1,0 +1,27 @@
+query GetSuggestedProducts($productGroup: [String!]) {
+  getSuggestedProducts(productGroup: $productGroup) {
+    id
+    name
+    promo_text
+    product_group_id
+    product_url
+    price
+    brand
+    final_price
+    category_names
+    promotion_flag
+    stock_quantity
+    skuid
+    breadcrumbs
+    image_url
+    sku
+    color
+    size
+    product_group
+    widget_id
+    promo_flags {
+      name
+      text
+    }
+  }
+}

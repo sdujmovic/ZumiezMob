@@ -1,0 +1,37 @@
+query GetStoresInventory($zipCode: String!, $milesRadius: Int!, $sku: String!, $limit: Int) {
+  storesInventory: getStoresInventory(
+    zipCode: $zipCode
+    milesRadius: $milesRadius
+    sku: $sku
+    limit: $limit
+  ) {
+    address
+    city
+    country
+    description
+    distance
+    has_store_page
+    identifier
+    image
+    latitude
+    longitude
+    name
+    phone_number
+    pickup_location_code
+    position
+    postal_code
+    postcode
+    region
+    store_email
+    store_hours
+    store_id
+    store_name
+    store_qty
+    street
+    temporary_closed
+    theme_id
+    trade_area { description name total_count trade_area_id type }
+    type
+    use_inventory
+  }
+}

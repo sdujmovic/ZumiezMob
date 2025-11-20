@@ -1,0 +1,48 @@
+query GetProductsSizes($skuList: [String!]!) {
+  products(filter: { sku: { in: $skuList } }) {
+    items {
+      id
+      sku
+      name
+      url_key
+      image {
+        url
+      }
+      categories {
+        name
+      }
+      description {
+        html
+      }
+      ... on ConfigurableProduct {
+        configurable_options {
+          id
+          attribute_id_v2
+          label
+          position
+          use_default
+          attribute_code
+          values {
+            value_index
+            label
+          }
+          product_id
+        }
+        variants {
+          product {
+            sku
+            uid
+            stock_status
+            att_size
+          }
+        }
+      }
+      special_price
+      original_price
+      manufacturer
+      att_fit_details
+      att_product_details
+      __typename
+    }
+  }
+}

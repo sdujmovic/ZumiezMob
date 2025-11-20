@@ -1,0 +1,70 @@
+{
+"uuid": "052ee06f-9c0e-4fc9-8f76-bfd036446803",
+"photosURL": ["https://cdn.crowdtwist.com/img/v2/223a5985976a5985804b16fe341474ff1abe48fe/w/h/0/image.jpg"],
+"isFavourite": false,
+"name": "Win A Trip To Skate With Converse Cons in St. Louis",
+"currentPointsBalance": 192,
+"pointsNeeded": 500,
+"description": "Enter to win a VIP flyaway trip for you and a friend to Skate with the Converse Cons skate team featuring Louie Lopez, Alexis Sablone, Kenny Anderson, Raney Bares, & Kaue Cossa. \nEnjoy a weekend in St. Louis with a VIP experience. & PLUS exclusive product from the brand! Trip includes travel and expenses. \nBest of luck! The more times you enter, the better your chances of winning. This sweepstakes ends 5/24/2019",
+"relatedRewards":[
+    {
+    "uuid": "052ee06f-9c0e-4fc9-8f76-bfd036446803",
+    "photosURL": ["https://cdn.crowdtwist.com/img/v2/35d9880b85fa637ace494e116d63de159916fada/w/h/0/image.jpg"],
+    "isFavourite": false,
+    "name": "Win A Limited Edition Herschel Supply BE@RBRICK Collectable!",
+    "currentPointsBalance": 192,
+    "pointsNeeded": 500,
+    "description": "Enter to win a Limited Edition Herschel Supply BE@RBRICK Collectable! \nGood luck! The more times you enter, the better your chance of winning. This sweepstakes will be open for approximately four weeks after its live date. Two winners will be notified using the e-mail or phone number associated with their Zumiez Stash account, 1-2 weeks after the sweepstakes has ended. \nPRODUCT DESCRIPTION: BE@RBRICK 400% - A limited-edition collection featuring the pop art collectible wearing one of our first backpack designs. \nPARTNERSHIP ABOUT: BE@RBRICK is not just a toy, but a collaborative canvas for artists, characters, brands and more. Released in 2001, BE@RBRICK is a pop art icon to fans around the world since its beginnings."
+    },
+    {
+    "uuid": "052ee06f-9c0e-4fc9-8f76-bfd036446803",
+    "photosURL": ["https://cdn.crowdtwist.com/img/v2/111daff490c7a97feba24af8ae5ea45681ddbb1b/w/h/0/image.jpg"],
+    "isFavourite": false,
+    "name": "HANG WITH BOBBY HUNDREDS",
+    "currentPointsBalance": 192,
+    "pointsNeeded": 15000,
+    "description": "By redeeming this reward you understand that Zumiez will not provide any necessary transportation and lodging. \nGain VIP Access to Hang with Bobby Hundreds and learn how to screen print from Bobby himself. \n\nLimited spots available! Redeemers will be contacted as the date approaches using the e-mail or phone number associated with their Zumiez Stash account."
+    },
+    {
+    "uuid": "052ee06f-9c0e-4fc9-8f76-bfd036446803",
+    "photosURL": ["https://cdn.crowdtwist.com/img/v2/a8f0161f4190178bae26c87dd8483a0d96313574/w/h/0/image.jpg"],
+    "isFavourite": false,
+    "name": "Element Westgate Carver 8.25\" Signed Skate Deck",
+    "currentPointsBalance": 192,
+    "pointsNeeded": 15000,
+    "description": "Redeem a Signed Brandon Westgate Element deck today!"
+    },
+    {
+    "uuid": "052ee06f-9c0e-4fc9-8f76-bfd036446803",
+    "photosURL": ["https://cdn.crowdtwist.com/img/v2/407a13a5689cf7222fa6b3d25c37ed4819dc2c21/w/h/0/image.jpg"],
+    "isFavourite": false,
+    "name": "adidas Miles Silvas Signed Poster",
+    "currentPointsBalance": 192,
+    "pointsNeeded": 30000,
+    "description": "Redeem an Adidas Poster Signed by Miles Silvas today!"
+    },
+    {
+    "uuid": "052ee06f-9c0e-4fc9-8f76-bfd036446803",
+    "photosURL": ["https://cdn.crowdtwist.com/img/v2/63270efc6a18c16935685b565964f0bf4ec52faf/w/h/0/image.jpg"],
+    "isFavourite": false,
+    "name": "Limited Edition Slushcult Mystery Cup",
+    "currentPointsBalance": 192,
+    "pointsNeeded": 70000,
+    "description": "Redeem a Limited Edition Slushcult Mystery Cup today! \nNOTE: Colors are chosen at random."
+    }
+],
+"earnMethods": [
+    {
+        "uuid":"052ee06f-9c0e-4fc9-8f76-bfd036446803",
+        "photoURL":"https://cdn.crowdtwist.com/img/v2/f13020b14753e3efa3d122c4f2530379d2d78669/100/100/0/image.png",
+        "title":"Zumiez Presents Vans Off The Wall",
+        "points": 100
+    },
+    {
+        "uuid":"052ee06f-9c0e-4fc9-8f76-bfd036446803",
+        "photoURL":"https://cdn.crowdtwist.com/img/v2/c980ead71dcfe490d73171cf2b33a45ac071806f/100/100/0/image.png",
+        "title":"Watch Pro Rider Jake Donnely",
+        "points": 200
+    }
+]
+}

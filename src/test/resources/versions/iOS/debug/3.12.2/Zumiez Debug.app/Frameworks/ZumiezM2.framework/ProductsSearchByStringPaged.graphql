@@ -1,0 +1,47 @@
+query ($searchString: String!, $currentPage: Int!, $pageSize: Int!) {
+  products(
+    search: $searchString
+    currentPage: $currentPage
+    pageSize: $pageSize
+  ) {
+    total_count
+    page_info {
+      page_size
+      total_pages
+      current_page
+    }
+    items {
+      id
+      uid
+      __typename
+      name
+      url_key
+      sku
+      description {
+        html
+      }
+      image {
+        url
+      }
+      thumbnail {
+        url
+      }
+      url_key
+      updated_at
+      created_at
+      price {
+        regularPrice {
+          amount {
+            currency
+            value
+          }
+        }
+      }
+      categories {
+        id
+        __typename
+        url_path
+      }
+    }
+  }
+}

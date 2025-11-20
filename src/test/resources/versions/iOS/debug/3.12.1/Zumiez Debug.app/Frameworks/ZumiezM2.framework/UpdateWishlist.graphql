@@ -1,0 +1,7 @@
+mutation UpdateWishlist($wishlistId: ID!, $name: String, $visibility: WishlistVisibilityEnum){
+  updateWishlist(wishlistId: $wishlistId, name: $name, visibility: $visibility){
+    name
+    uid
+    visibility
+  }
+}

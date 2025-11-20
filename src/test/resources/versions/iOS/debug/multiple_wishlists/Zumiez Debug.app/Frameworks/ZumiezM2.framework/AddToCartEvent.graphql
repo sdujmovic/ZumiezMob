@@ -1,0 +1,13 @@
+mutation AddToCartEvent($createEventData: AddToCartInput!) {
+  addToCart(createEventData: $createEventData) {
+    id
+    stashId
+    category
+    eventType
+    platform
+    version
+    payload
+    createdAt
+    deletedAt
+  }
+}

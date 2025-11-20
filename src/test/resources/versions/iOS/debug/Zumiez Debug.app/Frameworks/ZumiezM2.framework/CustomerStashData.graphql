@@ -1,0 +1,14 @@
+query {
+  customer {
+    stash_api_token {
+      stash_key
+      stash_token
+      user_id
+    }
+    stash_data {
+      stash_id
+      stash_level
+      stash_points
+    }
+  }
+}

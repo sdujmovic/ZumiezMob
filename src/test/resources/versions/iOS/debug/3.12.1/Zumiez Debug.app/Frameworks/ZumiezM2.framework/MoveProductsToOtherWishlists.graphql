@@ -1,0 +1,13 @@
+mutation MoveProductsToOtherWishlists(
+  $sourceWishlistUid: ID!,
+  $destinationWishlistUids: [ID!]!,
+  $wishlistItems: [ID!]!
+){
+  moveProductsToOtherWishlists(
+    sourceWishlistUid: $sourceWishlistUid,
+    destinationWishlistUids: $destinationWishlistUids,
+    wishlistItems: $wishlistItems
+  ){
+    user_errors { message }
+  }
+}

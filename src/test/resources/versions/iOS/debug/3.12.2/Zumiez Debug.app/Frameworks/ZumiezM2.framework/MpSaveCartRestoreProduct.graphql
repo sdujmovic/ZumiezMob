@@ -1,0 +1,3 @@
+mutation MpSaveCartRestoreProduct($cartId: String!, $token: String!) {
+  mpSaveCartRestoreProduct(cart_id: $cartId, token: $token)
+}

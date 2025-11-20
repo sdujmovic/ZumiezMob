@@ -1,0 +1,13 @@
+mutation CopyProductsToOtherWishlists(
+  $sourceWishlistUid: ID!,
+  $destinationWishlistUids: [ID!]!,
+  $wishlistItemUids: [ID!]!
+){
+  copyProductsToOtherWishlists(
+    sourceWishlistUid: $sourceWishlistUid,
+    destinationWishlistUids: $destinationWishlistUids,
+    wishlistItemUids: $wishlistItemUids
+  ){
+    destination_wishlist { id name }
+  }
+}

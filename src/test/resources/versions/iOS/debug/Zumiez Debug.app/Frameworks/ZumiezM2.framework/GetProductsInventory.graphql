@@ -1,0 +1,33 @@
+query GetProductsInventory($skuList: [String!]!){
+    products(filter: {sku: {in: $skuList}}){
+        items {
+            ... on ConfigurableProduct {
+                id
+                name
+                special_price
+                original_price
+                image {
+                    url
+                }
+                url_key
+                sku
+                configurable_options {
+                    attribute_code
+                    attribute_id_v2
+                    values {
+                        value_index
+                        label
+                    }
+                }
+                variants {
+                    product {
+                        sku
+                        att_size
+                        stock_status
+                        salable_qty
+                    }
+                }
+            }
+        }
+    }
+}

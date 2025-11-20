@@ -1,0 +1,10 @@
+mutation ($email: String!, $password: String!) {
+  generateCustomerToken(email: $email, password: $password) {
+    token
+    stash_data {
+      stash_token
+      stash_key
+      user_id
+    }
+  }
+}

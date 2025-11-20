@@ -1,0 +1,30 @@
+{
+  "validCredentials" : {
+    "prod" : {
+      "email" : "qa07ri@gmail.com",
+      "phone" : "+13235103207",
+      "password" : "Skate1978#"
+    },
+    "debug" : {
+      "email" : "sandra.dujmovic@elixirr.com",
+      "phone" : "+14133248551",
+      "password" : "Skate1978#"
+    }
+  },
+  "invalidCredentials" : {
+    "invalidEmail" : "tttttt123",
+    "invalidFormat" : "invalid@",
+    "tooShort" : "abc",
+    "numbersOnly" : "12345",
+    "specialCharsOnly" : "@#$%"
+  },
+  "errorMessages" : {
+    "invalidInput" : "Enter a valid phone or email",
+    "emptyFields" : "Enter a valid phone or email"
+  },
+  "notRegisteredUser" : {
+    "email" : "not-registered-user@example.com",
+    "phone" : "+1234567890",
+    "password" : "ValidPass123!"
+  }
+}

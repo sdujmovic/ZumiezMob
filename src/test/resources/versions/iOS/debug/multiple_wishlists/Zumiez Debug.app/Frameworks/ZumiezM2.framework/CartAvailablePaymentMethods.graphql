@@ -1,0 +1,8 @@
+query ($cardID: String!) {
+  cart(cart_id: $cardID) {
+    available_payment_methods {
+      code
+      title
+    }
+  }
+}

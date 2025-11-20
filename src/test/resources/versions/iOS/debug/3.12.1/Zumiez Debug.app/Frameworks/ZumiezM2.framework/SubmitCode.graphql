@@ -1,0 +1,9 @@
+mutation SubmitCode ($id: Int!, $redemption_code: String!) {
+  executeActivity(id: $id, redemption_code: $redemption_code) {
+    error
+    is_success
+    redirect_url
+    num_points
+  }
+}
+
